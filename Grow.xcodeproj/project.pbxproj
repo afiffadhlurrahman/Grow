@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF41C6F92BDB648D0036F92E /* TaskCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6F82BDB648D0036F92E /* TaskCompleted.swift */; };
+		4620FFA92BDB640C00B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFA82BDB640C00B2F1C9 /* SDWebImageLottieCoder */; };
+		4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */; };
 		EFAD78782BD94BBD005061E3 /* Grow Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EFAD78772BD94BBD005061E3 /* Grow Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787C2BD94BBD005061E3 /* GrowApp.swift */; };
 		EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787E2BD94BBD005061E3 /* ContentView.swift */; };
@@ -40,7 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EF41C6F82BDB648D0036F92E /* TaskCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompleted.swift; sourceTree = "<group>"; };
+		4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
 		EFAD78712BD94BBD005061E3 /* Grow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD78772BD94BBD005061E3 /* Grow Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grow Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD787C2BD94BBD005061E3 /* GrowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowApp.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4620FFA92BDB640C00B2F1C9 /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +119,7 @@
 				EFAD787E2BD94BBD005061E3 /* ContentView.swift */,
 				EFAD78802BD94BBE005061E3 /* Assets.xcassets */,
 				EFAD78822BD94BBE005061E3 /* Preview Content */,
+				4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */,
 			);
 			path = "Grow Watch App";
 			sourceTree = "<group>";
@@ -162,6 +165,9 @@
 			dependencies = (
 			);
 			name = "Grow Watch App";
+			packageProductDependencies = (
+				4620FFA82BDB640C00B2F1C9 /* SDWebImageLottieCoder */,
+			);
 			productName = "Grow Watch App";
 			productReference = EFAD78772BD94BBD005061E3 /* Grow Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -193,6 +199,9 @@
 				Base,
 			);
 			mainGroup = EFAD786A2BD94BBC005061E3;
+			packageReferences = (
+				4620FFA72BDB640C00B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
+			);
 			productRefGroup = EFAD78722BD94BBD005061E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -227,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */,
 				EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */,
 				EF41C6F92BDB648D0036F92E /* TaskCompleted.swift in Sources */,
 				EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */,
@@ -366,7 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = F7WR45KMA2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
@@ -396,7 +406,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = F7WR45KMA2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
@@ -425,7 +435,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = F7WR45KMA2;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
@@ -442,7 +452,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = F7WR45KMA2;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
@@ -485,6 +495,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4620FFA72BDB640C00B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageLottieCoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4620FFA82BDB640C00B2F1C9 /* SDWebImageLottieCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4620FFA72BDB640C00B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFAD786B2BD94BBC005061E3 /* Project object */;
 }
