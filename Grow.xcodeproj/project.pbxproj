@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF41C6F92BDB648D0036F92E /* TaskCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6F82BDB648D0036F92E /* TaskCompleted.swift */; };
 		EFAD78782BD94BBD005061E3 /* Grow Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EFAD78772BD94BBD005061E3 /* Grow Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787C2BD94BBD005061E3 /* GrowApp.swift */; };
 		EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787E2BD94BBD005061E3 /* ContentView.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EF41C6F82BDB648D0036F92E /* TaskCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompleted.swift; sourceTree = "<group>"; };
 		EFAD78712BD94BBD005061E3 /* Grow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD78772BD94BBD005061E3 /* Grow Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grow Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD787C2BD94BBD005061E3 /* GrowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowApp.swift; sourceTree = "<group>"; };
@@ -58,6 +60,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF41C6F32BDB63990036F92E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF41C6F52BDB64390036F92E /* Presenter */,
+				EF41C6F72BDB64540036F92E /* Component */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF41C6F42BDB642B0036F92E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF41C6F52BDB64390036F92E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EF41C6F82BDB648D0036F92E /* TaskCompleted.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EF41C6F72BDB64540036F92E /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		EFAD786A2BD94BBC005061E3 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +111,8 @@
 		EFAD787B2BD94BBD005061E3 /* Grow Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				EF41C6F42BDB642B0036F92E /* Model */,
+				EF41C6F32BDB63990036F92E /* View */,
 				EFAD787C2BD94BBD005061E3 /* GrowApp.swift */,
 				EFAD787E2BD94BBD005061E3 /* ContentView.swift */,
 				EFAD78802BD94BBE005061E3 /* Assets.xcassets */,
@@ -193,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */,
+				EF41C6F92BDB648D0036F92E /* TaskCompleted.swift in Sources */,
 				EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
