@@ -12,41 +12,39 @@ struct TaskCompletedView: View {
     @ObservedObject var viewModel: LottieViewModel = .init()
     
     var body: some View {
-        NavigationView {
-                ZStack{
-                    Color(red: 0.78, green: 0.92, blue: 0.79).ignoresSafeArea()
+            ZStack{
+                Color(red: 0.78, green: 0.92, blue: 0.79).ignoresSafeArea()
+                
+                // Confetti
+                Image(uiImage: viewModel.image)
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFit()
+                    .onAppear {
+                        self.viewModel.loadAnimationFromFile(filename: lottieConfetti)
+                    }
+                
+                
+                VStack(spacing: 10){
+                    Spacer()
+                    Spacer()
+                    // Tree
+                    ZStack{
+                        Image("defaultIcon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200)
+                    }
                     
-                    // Confetti
-                    Image(uiImage: viewModel.image)
-                        .resizable()
-                        .ignoresSafeArea()
-                        .scaledToFit()
-                        .onAppear {
-                            self.viewModel.loadAnimationFromFile(filename: lottieConfetti)
-                        }
+                    // Button
+                    HomeButton()
                     
-                    
-                    VStack(spacing: 10){
-                        Spacer()
-                        Spacer()
-                        // Tree
-                        ZStack{
-                            Image("defaultIcon")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 200)
-                        }
-                        
-                        // Button
-                        HomeButton()
-                        
-                        Spacer()
-                    }.ignoresSafeArea()
-            }
-            .buttonStyle(.borderless)
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
+                    Spacer()
+                }.ignoresSafeArea()
         }
+        .buttonStyle(.borderless)
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
