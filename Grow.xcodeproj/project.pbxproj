@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDEBCEDF2BDB8B380083D4C6 /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */; };
-		CDEE0E452BDBD8E30066CA9F /* FocusTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */; };
-		EF41C6F92BDB648D0036F92E /* TaskCompleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6F82BDB648D0036F92E /* TaskCompleted.swift */; };
+		4620FFA92BDB640C00B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFA82BDB640C00B2F1C9 /* SDWebImageLottieCoder */; };
+		4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */; };
+		CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */; };
+		CDC578252BDC894C00EEB5A0 /* FocusTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */; };
 		EFAD78782BD94BBD005061E3 /* Grow Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EFAD78772BD94BBD005061E3 /* Grow Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787C2BD94BBD005061E3 /* GrowApp.swift */; };
 		EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787E2BD94BBD005061E3 /* ContentView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
 		CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelect.swift; sourceTree = "<group>"; };
 		CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTree.swift; sourceTree = "<group>"; };
 		EF41C6F82BDB648D0036F92E /* TaskCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompleted.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4620FFA92BDB640C00B2F1C9 /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,8 +72,6 @@
 			children = (
 				EF41C6F52BDB64390036F92E /* Presenter */,
 				EF41C6F72BDB64540036F92E /* Component */,
-				CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */,
-				CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,9 +121,12 @@
 				EF41C6F42BDB642B0036F92E /* Model */,
 				EF41C6F32BDB63990036F92E /* View */,
 				EFAD787C2BD94BBD005061E3 /* GrowApp.swift */,
+				CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */,
+				CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */,
 				EFAD787E2BD94BBD005061E3 /* ContentView.swift */,
 				EFAD78802BD94BBE005061E3 /* Assets.xcassets */,
 				EFAD78822BD94BBE005061E3 /* Preview Content */,
+				4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */,
 			);
 			path = "Grow Watch App";
 			sourceTree = "<group>";
@@ -168,6 +172,9 @@
 			dependencies = (
 			);
 			name = "Grow Watch App";
+			packageProductDependencies = (
+				4620FFA82BDB640C00B2F1C9 /* SDWebImageLottieCoder */,
+			);
 			productName = "Grow Watch App";
 			productReference = EFAD78772BD94BBD005061E3 /* Grow Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -199,6 +206,9 @@
 				Base,
 			);
 			mainGroup = EFAD786A2BD94BBC005061E3;
+			packageReferences = (
+				4620FFA72BDB640C00B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
+			);
 			productRefGroup = EFAD78722BD94BBD005061E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,11 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDEBCEDF2BDB8B380083D4C6 /* LevelSelect.swift in Sources */,
+				CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */,
+				4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */,
 				EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */,
-				EF41C6F92BDB648D0036F92E /* TaskCompleted.swift in Sources */,
 				EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */,
-				CDEE0E452BDBD8E30066CA9F /* FocusTree.swift in Sources */,
+				CDC578252BDC894C00EEB5A0 /* FocusTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +503,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4620FFA72BDB640C00B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageLottieCoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4620FFA82BDB640C00B2F1C9 /* SDWebImageLottieCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4620FFA72BDB640C00B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFAD786B2BD94BBC005061E3 /* Project object */;
 }
