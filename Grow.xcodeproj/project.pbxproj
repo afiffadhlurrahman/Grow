@@ -417,7 +417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = B4MA3ZSJ87;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
@@ -428,7 +428,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfadli.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forestRunn.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -448,7 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = B4MA3ZSJ87;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
@@ -459,7 +459,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfadli.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forestRunn.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -477,11 +477,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B4MA3ZSJ87;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfadli.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forestRun.grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -497,11 +497,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B4MA3ZSJ87;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfadli.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forestRun.grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

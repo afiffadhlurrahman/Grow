@@ -15,9 +15,9 @@ struct LevelSelect: View {
         VStack {
             NavigationStack (path: $navPath.path) {
                 List {
-                    LevelCard(level: "easy")
-                    LevelCard(level: "medium")
-                    LevelCard(level: "hard")
+                    LevelCard(level: "easy", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58))
+                    LevelCard(level: "medium", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58))
+                    LevelCard(level: "hard", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58))
                 }
                 .listStyle(.carousel)
                 .navigationDestination(for: Router.Destination.self) { destination in
@@ -29,7 +29,7 @@ struct LevelSelect: View {
                         }
                 }
             }
-        }
+        }.background(Color(uiColor: UIColor(red: 0.78, green: 0.92, blue: 0.79, alpha: 1)))
     }
 }
 
