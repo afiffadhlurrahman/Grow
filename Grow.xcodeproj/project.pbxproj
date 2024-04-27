@@ -11,6 +11,10 @@
 		4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */; };
 		CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */; };
 		CDC578252BDC894C00EEB5A0 /* FocusTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */; };
+		EF41C6FD2BDB9AF80036F92E /* TaskCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */; };
+		EF41C6FF2BDBA3180036F92E /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6FE2BDBA3180036F92E /* HomeButton.swift */; };
+		EF41C7012BDBACF80036F92E /* TesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C7002BDBACF80036F92E /* TesterView.swift */; };
+		EF41C7042BDCA3CE0036F92E /* lottieConfetti.json in Resources */ = {isa = PBXBuildFile; fileRef = EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */; };
 		EFAD78782BD94BBD005061E3 /* Grow Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EFAD78772BD94BBD005061E3 /* Grow Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787C2BD94BBD005061E3 /* GrowApp.swift */; };
 		EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787E2BD94BBD005061E3 /* ContentView.swift */; };
@@ -47,6 +51,10 @@
 		CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelect.swift; sourceTree = "<group>"; };
 		CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTree.swift; sourceTree = "<group>"; };
 		EF41C6F82BDB648D0036F92E /* TaskCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompleted.swift; sourceTree = "<group>"; };
+		EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompletedView.swift; sourceTree = "<group>"; };
+		EF41C6FE2BDBA3180036F92E /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
+		EF41C7002BDBACF80036F92E /* TesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesterView.swift; sourceTree = "<group>"; };
+		EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottieConfetti.json; sourceTree = "<group>"; };
 		EFAD78712BD94BBD005061E3 /* Grow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD78772BD94BBD005061E3 /* Grow Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grow Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD787C2BD94BBD005061E3 /* GrowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowApp.swift; sourceTree = "<group>"; };
@@ -86,7 +94,8 @@
 		EF41C6F52BDB64390036F92E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				EF41C6F82BDB648D0036F92E /* TaskCompleted.swift */,
+				EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */,
+				EF41C7002BDBACF80036F92E /* TesterView.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -94,8 +103,17 @@
 		EF41C6F72BDB64540036F92E /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				EF41C6FE2BDBA3180036F92E /* HomeButton.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		EF41C7022BDCA3B40036F92E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		EFAD786A2BD94BBC005061E3 = {
@@ -118,6 +136,7 @@
 		EFAD787B2BD94BBD005061E3 /* Grow Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				EF41C7022BDCA3B40036F92E /* Assets */,
 				EF41C6F42BDB642B0036F92E /* Model */,
 				EF41C6F32BDB63990036F92E /* View */,
 				EFAD787C2BD94BBD005061E3 /* GrowApp.swift */,
@@ -233,6 +252,7 @@
 			files = (
 				EFAD78842BD94BBE005061E3 /* Preview Assets.xcassets in Resources */,
 				EFAD78812BD94BBE005061E3 /* Assets.xcassets in Resources */,
+				EF41C7042BDCA3CE0036F92E /* lottieConfetti.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +265,10 @@
 			files = (
 				CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */,
 				4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */,
+				EF41C6FD2BDB9AF80036F92E /* TaskCompletedView.swift in Sources */,
 				EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */,
+				EF41C7012BDBACF80036F92E /* TesterView.swift in Sources */,
+				EF41C6FF2BDBA3180036F92E /* HomeButton.swift in Sources */,
 				EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */,
 				CDC578252BDC894C00EEB5A0 /* FocusTree.swift in Sources */,
 			);
@@ -450,7 +473,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alfadli.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -467,7 +493,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alfadli.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
