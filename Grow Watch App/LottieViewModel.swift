@@ -18,7 +18,7 @@ class LottieViewModel: ObservableObject {
     private var animationTimer: Timer?
     private var currentFrame: UInt = 0
     private var playing: Bool = false
-    private var speed: Double = 1.0
+    var speed: Double = 1
     
     /// Loads animation data
     /// - Parameter url: url of animation JSON

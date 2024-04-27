@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4620FFA92BDB640C00B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFA82BDB640C00B2F1C9 /* SDWebImageLottieCoder */; };
 		4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */; };
+		4620FFAE2BDB886100B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFAD2BDB886100B2F1C9 /* SDWebImageLottieCoder */; };
+		4620FFB02BDB9EC500B2F1C9 /* TreeAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */; };
 		CD2604A22BDCBC97005ED9EB /* LevelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2604A12BDCBC97005ED9EB /* LevelCard.swift */; };
 		CD5E17612BDD0F6600FB9A4B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5E17602BDD0F6600FB9A4B /* Router.swift */; };
 		CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
+		4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TreeAnimation.json; sourceTree = "<group>"; };
 		CD2604A12BDCBC97005ED9EB /* LevelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCard.swift; sourceTree = "<group>"; };
 		CD5E175F2BDD058C00FB9A4B /* Grow Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Grow Watch App.entitlements"; sourceTree = "<group>"; };
 		CD5E17602BDD0F6600FB9A4B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -72,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4620FFA92BDB640C00B2F1C9 /* SDWebImageLottieCoder in Frameworks */,
+				4620FFAE2BDB886100B2F1C9 /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +152,7 @@
 				EF41C6F32BDB63990036F92E /* View */,
 				EFAD787C2BD94BBD005061E3 /* GrowApp.swift */,
 				EFAD787E2BD94BBD005061E3 /* ContentView.swift */,
+				4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */,
 				EFAD78802BD94BBE005061E3 /* Assets.xcassets */,
 				EFAD78822BD94BBE005061E3 /* Preview Content */,
 				4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */,
@@ -199,7 +202,7 @@
 			);
 			name = "Grow Watch App";
 			packageProductDependencies = (
-				4620FFA82BDB640C00B2F1C9 /* SDWebImageLottieCoder */,
+				4620FFAD2BDB886100B2F1C9 /* SDWebImageLottieCoder */,
 			);
 			productName = "Grow Watch App";
 			productReference = EFAD78772BD94BBD005061E3 /* Grow Watch App.app */;
@@ -233,7 +236,7 @@
 			);
 			mainGroup = EFAD786A2BD94BBC005061E3;
 			packageReferences = (
-				4620FFA72BDB640C00B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
+				4620FFAC2BDB886100B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
 			);
 			productRefGroup = EFAD78722BD94BBD005061E3 /* Products */;
 			projectDirPath = "";
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4620FFB02BDB9EC500B2F1C9 /* TreeAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,7 +549,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4620FFA72BDB640C00B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
+		4620FFAC2BDB886100B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageLottieCoder";
 			requirement = {
@@ -556,9 +560,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4620FFA82BDB640C00B2F1C9 /* SDWebImageLottieCoder */ = {
+		4620FFAD2BDB886100B2F1C9 /* SDWebImageLottieCoder */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4620FFA72BDB640C00B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			package = 4620FFAC2BDB886100B2F1C9 /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
 			productName = SDWebImageLottieCoder;
 		};
 /* End XCSwiftPackageProductDependency section */
