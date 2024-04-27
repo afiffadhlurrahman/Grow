@@ -44,7 +44,6 @@ struct TaskCompletedView: View {
                     }.ignoresSafeArea()
             }
             .buttonStyle(.borderless)
-            .navigationBarTitle("Home")
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
         }

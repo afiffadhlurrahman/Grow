@@ -20,8 +20,8 @@ struct LevelCard: View {
     }
     
     var body: some View {
-        NavigationLink {
-            FocusTree()
+        Button {
+            Router.shared.path.append(.focusTree)
         } label: {
             HStack {
                 Image(systemName: levelIcon)

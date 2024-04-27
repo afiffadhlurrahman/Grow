@@ -9,15 +9,25 @@ import SwiftUI
 
 struct LevelSelect: View {
     @Environment(\.dismiss) private var dismiss
+    @StateObject private var navPath = Router.shared
     
     var body: some View {
         VStack {
-            NavigationStack {
+            NavigationStack (path: $navPath.path) {
                 List {
                     LevelCard(level: "easy")
                     LevelCard(level: "medium")
                     LevelCard(level: "hard")
-                }.listStyle(.carousel)
+                }
+                .listStyle(.carousel)
+                .navigationDestination(for: Router.Destination.self) { destination in
+                        switch destination {
+                            case .focusTree:
+                                FocusTree()
+                            case .taskComplete:
+                                TaskCompletedView()
+                        }
+                }
             }
         }
     }

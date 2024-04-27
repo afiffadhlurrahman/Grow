@@ -10,6 +10,7 @@
 		4620FFA92BDB640C00B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFA82BDB640C00B2F1C9 /* SDWebImageLottieCoder */; };
 		4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */; };
 		CD2604A22BDCBC97005ED9EB /* LevelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2604A12BDCBC97005ED9EB /* LevelCard.swift */; };
+		CD5E17612BDD0F6600FB9A4B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5E17602BDD0F6600FB9A4B /* Router.swift */; };
 		CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */; };
 		CDC578252BDC894C00EEB5A0 /* FocusTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */; };
 		EF41C6FD2BDB9AF80036F92E /* TaskCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
 		CD2604A12BDCBC97005ED9EB /* LevelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCard.swift; sourceTree = "<group>"; };
+		CD5E175F2BDD058C00FB9A4B /* Grow Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Grow Watch App.entitlements"; sourceTree = "<group>"; };
+		CD5E17602BDD0F6600FB9A4B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelect.swift; sourceTree = "<group>"; };
 		CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTree.swift; sourceTree = "<group>"; };
 		EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompletedView.swift; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 				CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */,
 				EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */,
 				EF41C7002BDBACF80036F92E /* TesterView.swift */,
+				CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -105,9 +109,9 @@
 		EF41C6F72BDB64540036F92E /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */,
 				EF41C6FE2BDBA3180036F92E /* HomeButton.swift */,
 				CD2604A12BDCBC97005ED9EB /* LevelCard.swift */,
+				CD5E17602BDD0F6600FB9A4B /* Router.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -140,6 +144,7 @@
 		EFAD787B2BD94BBD005061E3 /* Grow Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				CD5E175F2BDD058C00FB9A4B /* Grow Watch App.entitlements */,
 				EF41C7022BDCA3B40036F92E /* Assets */,
 				EF41C6F42BDB642B0036F92E /* Model */,
 				EF41C6F32BDB63990036F92E /* View */,
@@ -267,6 +272,7 @@
 			files = (
 				CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */,
 				4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */,
+				CD5E17612BDD0F6600FB9A4B /* Router.swift in Sources */,
 				EF41C6FD2BDB9AF80036F92E /* TaskCompletedView.swift in Sources */,
 				EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */,
 				EF41C7012BDBACF80036F92E /* TesterView.swift in Sources */,
@@ -407,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Grow Watch App/Grow Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";
@@ -437,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Grow Watch App/Grow Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";

@@ -9,13 +9,15 @@ import SwiftUI
 
 struct HomeButton: View {
     var body: some View {
-        NavigationLink(destination: TesterView()) {
-            ZStack {
-                Circle().fill(Color(red: 0.44, green: 0.69, blue: 0.52)).frame(width: 50)
-                Image(systemName: "house.fill")
-                    .foregroundColor(.white)
-            }
-        }
+        Button(action: {
+            Router.shared.path.removeAll()
+        }, label: {
+            Image(systemName: "house.fill")
+                .foregroundColor(.white)
+        })
+        .padding()
+        .background(Color(red: 0.44, green: 0.69, blue: 0.52))
+        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
     }
     
 }
