@@ -1,31 +1,11 @@
 //
-//  LevelSelect.swift
+//  LevelCard.swift
 //  Grow Watch App
 //
-//  Created by Alfadli Maulana Siddik on 26/04/24.
+//  Created by Alfadli Maulana Siddik on 27/04/24.
 //
 
 import SwiftUI
-
-struct LevelSelect: View {
-    @Environment(\.dismiss) private var dismiss
-    
-    var body: some View {
-        VStack {
-            NavigationStack {
-                List {
-                    LevelCard(level: "easy")
-                    LevelCard(level: "medium")
-                    LevelCard(level: "hard")
-                }.listStyle(.carousel)
-            }
-        }
-    }
-}
-
-#Preview {
-    LevelSelect()
-}
 
 struct LevelCard: View {
     var level: String
@@ -64,4 +44,8 @@ struct LevelCard: View {
             .cornerRadius(16.0)
         }.listItemTint(Color.gray.opacity(0.8))
     }
+}
+
+#Preview {
+    LevelCard(level: "easy")
 }
