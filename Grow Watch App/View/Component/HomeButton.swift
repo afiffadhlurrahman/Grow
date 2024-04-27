@@ -9,15 +9,25 @@ import SwiftUI
 
 struct HomeButton: View {
     var body: some View {
-        Button(action: {
-            Router.shared.path.removeAll()
-        }, label: {
-            Image(systemName: "house.fill")
-                .foregroundColor(.white)
-        })
-        .padding()
-        .background(Color(red: 0.44, green: 0.69, blue: 0.52))
-        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Circle()
+                .foregroundColor(Color(red: 0.44, green: 0.69, blue: 0.52))
+                .frame(width: 50)
+            
+            Button(action: {
+                Router.shared.path.removeAll()
+            }, label: {
+                Image(systemName: "house.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 27)
+                    .foregroundColor(.white)
+            })
+            .padding()
+            .background(Color(red: 0.44, green: 0.69, blue: 0.52))
+            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            .buttonStyle(.borderless)
+        }
     }
     
 }
