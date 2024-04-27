@@ -13,7 +13,7 @@ struct TaskCompletedView: View {
     
     var body: some View {
             ZStack{
-                Color(red: 0.78, green: 0.92, blue: 0.79).ignoresSafeArea()
+                // Color(red: 0.78, green: 0.92, blue: 0.79)
                 
                 // Confetti
                 Image(uiImage: viewModel.image)
@@ -21,13 +21,13 @@ struct TaskCompletedView: View {
                     .ignoresSafeArea()
                     .scaledToFit()
                     .onAppear {
+                        self.viewModel.speed = 10
+                        self.viewModel.lastFrame = 130
                         self.viewModel.loadAnimationFromFile(filename: lottieConfetti)
                     }
                 
                 
                 VStack(spacing: 10){
-                    Spacer()
-                    Spacer()
                     // Tree
                     ZStack{
                         Image("defaultIcon")
@@ -38,9 +38,7 @@ struct TaskCompletedView: View {
                     
                     // Button
                     HomeButton()
-                    
-                    Spacer()
-                }.ignoresSafeArea()
+                }
         }
         .buttonStyle(.borderless)
         .navigationBarHidden(true)
@@ -51,5 +49,3 @@ struct TaskCompletedView: View {
 #Preview {
     TaskCompletedView()
 }
-
-// https://lottie.host/9917178f-3626-4539-9ddf-db5117573cba/hgznNkZ0iZ.json
