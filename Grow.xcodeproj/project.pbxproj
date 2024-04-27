@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4620FFA92BDB640C00B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFA82BDB640C00B2F1C9 /* SDWebImageLottieCoder */; };
 		4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */; };
+		EF41C6FD2BDB9AF80036F92E /* TaskCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */; };
+		EF41C6FF2BDBA3180036F92E /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6FE2BDBA3180036F92E /* HomeButton.swift */; };
+		EF41C7012BDBACF80036F92E /* TesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C7002BDBACF80036F92E /* TesterView.swift */; };
 		EFAD78782BD94BBD005061E3 /* Grow Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EFAD78772BD94BBD005061E3 /* Grow Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787C2BD94BBD005061E3 /* GrowApp.swift */; };
 		EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787E2BD94BBD005061E3 /* ContentView.swift */; };
@@ -42,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
+		EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompletedView.swift; sourceTree = "<group>"; };
+		EF41C6FE2BDBA3180036F92E /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
+		EF41C7002BDBACF80036F92E /* TesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesterView.swift; sourceTree = "<group>"; };
 		EFAD78712BD94BBD005061E3 /* Grow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD78772BD94BBD005061E3 /* Grow Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grow Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD787C2BD94BBD005061E3 /* GrowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowApp.swift; sourceTree = "<group>"; };
@@ -81,7 +87,8 @@
 		EF41C6F52BDB64390036F92E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				EF41C6F82BDB648D0036F92E /* TaskCompleted.swift */,
+				EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */,
+				EF41C7002BDBACF80036F92E /* TesterView.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -89,6 +96,7 @@
 		EF41C6F72BDB64540036F92E /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				EF41C6FE2BDBA3180036F92E /* HomeButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -237,8 +245,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */,
+				EF41C6FD2BDB9AF80036F92E /* TaskCompletedView.swift in Sources */,
 				EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */,
-				EF41C6F92BDB648D0036F92E /* TaskCompleted.swift in Sources */,
+				EF41C7012BDBACF80036F92E /* TesterView.swift in Sources */,
+				EF41C6FF2BDBA3180036F92E /* HomeButton.swift in Sources */,
 				EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
