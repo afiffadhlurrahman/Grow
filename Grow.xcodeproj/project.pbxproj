@@ -10,6 +10,14 @@
 		4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */; };
 		4620FFAE2BDB886100B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFAD2BDB886100B2F1C9 /* SDWebImageLottieCoder */; };
 		4620FFB02BDB9EC500B2F1C9 /* TreeAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */; };
+		CD2604A22BDCBC97005ED9EB /* LevelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2604A12BDCBC97005ED9EB /* LevelCard.swift */; };
+		CD5E17612BDD0F6600FB9A4B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5E17602BDD0F6600FB9A4B /* Router.swift */; };
+		CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */; };
+		CDC578252BDC894C00EEB5A0 /* FocusTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */; };
+		EF41C6FD2BDB9AF80036F92E /* TaskCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */; };
+		EF41C6FF2BDBA3180036F92E /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6FE2BDBA3180036F92E /* HomeButton.swift */; };
+		EF41C7012BDBACF80036F92E /* TesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C7002BDBACF80036F92E /* TesterView.swift */; };
+		EF41C7042BDCA3CE0036F92E /* lottieConfetti.json in Resources */ = {isa = PBXBuildFile; fileRef = EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */; };
 		EFAD78782BD94BBD005061E3 /* Grow Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EFAD78772BD94BBD005061E3 /* Grow Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787C2BD94BBD005061E3 /* GrowApp.swift */; };
 		EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787E2BD94BBD005061E3 /* ContentView.swift */; };
@@ -44,6 +52,15 @@
 /* Begin PBXFileReference section */
 		4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
 		4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TreeAnimation.json; sourceTree = "<group>"; };
+		CD2604A12BDCBC97005ED9EB /* LevelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCard.swift; sourceTree = "<group>"; };
+		CD5E175F2BDD058C00FB9A4B /* Grow Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Grow Watch App.entitlements"; sourceTree = "<group>"; };
+		CD5E17602BDD0F6600FB9A4B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelect.swift; sourceTree = "<group>"; };
+		CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTree.swift; sourceTree = "<group>"; };
+		EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompletedView.swift; sourceTree = "<group>"; };
+		EF41C6FE2BDBA3180036F92E /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
+		EF41C7002BDBACF80036F92E /* TesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesterView.swift; sourceTree = "<group>"; };
+		EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottieConfetti.json; sourceTree = "<group>"; };
 		EFAD78712BD94BBD005061E3 /* Grow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD78772BD94BBD005061E3 /* Grow Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grow Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD787C2BD94BBD005061E3 /* GrowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowApp.swift; sourceTree = "<group>"; };
@@ -83,6 +100,10 @@
 		EF41C6F52BDB64390036F92E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */,
+				CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */,
+				EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */,
+				EF41C7002BDBACF80036F92E /* TesterView.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -90,8 +111,19 @@
 		EF41C6F72BDB64540036F92E /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				EF41C6FE2BDBA3180036F92E /* HomeButton.swift */,
+				CD2604A12BDCBC97005ED9EB /* LevelCard.swift */,
+				CD5E17602BDD0F6600FB9A4B /* Router.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		EF41C7022BDCA3B40036F92E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		EFAD786A2BD94BBC005061E3 = {
@@ -114,6 +146,8 @@
 		EFAD787B2BD94BBD005061E3 /* Grow Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				CD5E175F2BDD058C00FB9A4B /* Grow Watch App.entitlements */,
+				EF41C7022BDCA3B40036F92E /* Assets */,
 				EF41C6F42BDB642B0036F92E /* Model */,
 				EF41C6F32BDB63990036F92E /* View */,
 				EFAD787C2BD94BBD005061E3 /* GrowApp.swift */,
@@ -229,6 +263,7 @@
 			files = (
 				EFAD78842BD94BBE005061E3 /* Preview Assets.xcassets in Resources */,
 				EFAD78812BD94BBE005061E3 /* Assets.xcassets in Resources */,
+				EF41C7042BDCA3CE0036F92E /* lottieConfetti.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,9 +274,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */,
 				4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */,
+				CD5E17612BDD0F6600FB9A4B /* Router.swift in Sources */,
+				EF41C6FD2BDB9AF80036F92E /* TaskCompletedView.swift in Sources */,
 				EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */,
+				EF41C7012BDBACF80036F92E /* TesterView.swift in Sources */,
+				EF41C6FF2BDBA3180036F92E /* HomeButton.swift in Sources */,
 				EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */,
+				CDC578252BDC894C00EEB5A0 /* FocusTree.swift in Sources */,
+				CD2604A22BDCBC97005ED9EB /* LevelCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +417,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Grow Watch App/Grow Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = F7WR45KMA2;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
@@ -389,7 +432,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestrun.Grow.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forestRunn.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -405,10 +448,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Grow Watch App/Grow Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = F7WR45KMA2;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
@@ -419,7 +463,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestrun.Grow.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forestRunn.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -437,14 +481,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F7WR45KMA2;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestrun.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forestRun.grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -454,14 +501,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F7WR45KMA2;
+				DEVELOPMENT_TEAM = 9HR48NXTG8;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestrun.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forestRun.grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

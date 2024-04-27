@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct Grow_Watch_AppApp: App {
+struct GrowApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//            TaskCompletedView()
         }
     }
 }

@@ -1,5 +1,4 @@
 {
-  "originHash" : "6d6c7ed022139328c914b0e85419be8b8c9adb54df7293b668fc2ae762f81905",
   "pins" : [
     {
       "identity" : "librlottie-xcode",
@@ -29,5 +28,5 @@
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }
