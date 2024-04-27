@@ -12,7 +12,6 @@ struct TaskCompletedView: View {
     
     var body: some View {
         NavigationView {
-            VStack{
                 ZStack{
                     Color(red: 0.78, green: 0.92, blue: 0.79).ignoresSafeArea()
                     
@@ -26,7 +25,8 @@ struct TaskCompletedView: View {
                         }
                     
                     
-                    VStack{
+                    VStack(spacing: 10){
+                        Spacer()
                         // Tree
                         ZStack{
                             Image("defaultIcon")
@@ -34,12 +34,12 @@ struct TaskCompletedView: View {
                                 .scaledToFit()
                                 .frame(width: 200)
                         }
-                        Spacer()
                         
                         // Button
-                       HomeButton()
+                        HomeButton()
+                        
+                        Spacer()
                     }.ignoresSafeArea()
-                }
             }
             .buttonStyle(.borderless)
             .navigationBarTitle("Home")
