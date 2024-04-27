@@ -17,7 +17,9 @@ struct FocusTree: View {
                 Router.shared.path.removeAll()
             }, label: {
                 Image(systemName: "stop.fill")
+                    .foregroundColor(Color(red: 0.95, green: 0.88, blue: 0.82))
             })
+            .background(Color(red: 0.51, green: 0.73, blue: 0.58))
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             .tag(0)
             

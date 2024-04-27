@@ -99,9 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */,
+				CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */,
 				EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */,
 				EF41C7002BDBACF80036F92E /* TesterView.swift */,
-				CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
