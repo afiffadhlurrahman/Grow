@@ -12,6 +12,7 @@
 		EF41C6FD2BDB9AF80036F92E /* TaskCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */; };
 		EF41C6FF2BDBA3180036F92E /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C6FE2BDBA3180036F92E /* HomeButton.swift */; };
 		EF41C7012BDBACF80036F92E /* TesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41C7002BDBACF80036F92E /* TesterView.swift */; };
+		EF41C7042BDCA3CE0036F92E /* lottieConfetti.json in Resources */ = {isa = PBXBuildFile; fileRef = EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */; };
 		EFAD78782BD94BBD005061E3 /* Grow Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EFAD78772BD94BBD005061E3 /* Grow Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EFAD787D2BD94BBD005061E3 /* GrowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787C2BD94BBD005061E3 /* GrowApp.swift */; };
 		EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD787E2BD94BBD005061E3 /* ContentView.swift */; };
@@ -48,6 +49,7 @@
 		EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCompletedView.swift; sourceTree = "<group>"; };
 		EF41C6FE2BDBA3180036F92E /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
 		EF41C7002BDBACF80036F92E /* TesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesterView.swift; sourceTree = "<group>"; };
+		EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottieConfetti.json; sourceTree = "<group>"; };
 		EFAD78712BD94BBD005061E3 /* Grow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD78772BD94BBD005061E3 /* Grow Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grow Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD787C2BD94BBD005061E3 /* GrowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowApp.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		EF41C7022BDCA3B40036F92E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		EFAD786A2BD94BBC005061E3 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 		EFAD787B2BD94BBD005061E3 /* Grow Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				EF41C7022BDCA3B40036F92E /* Assets */,
 				EF41C6F42BDB642B0036F92E /* Model */,
 				EF41C6F32BDB63990036F92E /* View */,
 				EFAD787C2BD94BBD005061E3 /* GrowApp.swift */,
@@ -234,6 +245,7 @@
 			files = (
 				EFAD78842BD94BBE005061E3 /* Preview Assets.xcassets in Resources */,
 				EFAD78812BD94BBE005061E3 /* Assets.xcassets in Resources */,
+				EF41C7042BDCA3CE0036F92E /* lottieConfetti.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

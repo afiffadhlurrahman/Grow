@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TaskCompletedView: View {
+    @State var lottieConfetti: String = "lottieConfetti"
     @ObservedObject var viewModel: LottieViewModel = .init()
     
     var body: some View {
@@ -21,11 +22,12 @@ struct TaskCompletedView: View {
                         .ignoresSafeArea()
                         .scaledToFit()
                         .onAppear {
-                            self.viewModel.loadAnimation(url: URL(string: "https://lottie.host/9917178f-3626-4539-9ddf-db5117573cba/hgznNkZ0iZ.json")!)
+                            self.viewModel.loadAnimationFromFile(filename: lottieConfetti)
                         }
                     
                     
                     VStack(spacing: 10){
+                        Spacer()
                         Spacer()
                         // Tree
                         ZStack{
