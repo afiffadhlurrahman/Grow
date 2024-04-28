@@ -10,6 +10,7 @@
 		4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */; };
 		4620FFAE2BDB886100B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFAD2BDB886100B2F1C9 /* SDWebImageLottieCoder */; };
 		4620FFB02BDB9EC500B2F1C9 /* TreeAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */; };
+		CD0B34782BDE353E002842E7 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B34772BDE353E002842E7 /* WorkoutManager.swift */; };
 		CD2604A22BDCBC97005ED9EB /* LevelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2604A12BDCBC97005ED9EB /* LevelCard.swift */; };
 		CD5E17612BDD0F6600FB9A4B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5E17602BDD0F6600FB9A4B /* Router.swift */; };
 		CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
 		4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TreeAnimation.json; sourceTree = "<group>"; };
+		CD0B34742BDE2FB1002842E7 /* Grow-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Grow-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CD0B34772BDE353E002842E7 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutManager.swift; path = "Grow Watch App/View/Component/WorkoutManager.swift"; sourceTree = SOURCE_ROOT; };
 		CD2604A12BDCBC97005ED9EB /* LevelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCard.swift; sourceTree = "<group>"; };
 		CD5E175F2BDD058C00FB9A4B /* Grow Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Grow Watch App.entitlements"; sourceTree = "<group>"; };
 		CD5E17602BDD0F6600FB9A4B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 		EF41C6F42BDB642B0036F92E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CD0B34772BDE353E002842E7 /* WorkoutManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +150,7 @@
 		EFAD787B2BD94BBD005061E3 /* Grow Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				CD0B34742BDE2FB1002842E7 /* Grow-Watch-App-Info.plist */,
 				CD5E175F2BDD058C00FB9A4B /* Grow Watch App.entitlements */,
 				EF41C7022BDCA3B40036F92E /* Assets */,
 				EF41C6F42BDB642B0036F92E /* Model */,
@@ -278,6 +283,7 @@
 				4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */,
 				CD5E17612BDD0F6600FB9A4B /* Router.swift in Sources */,
 				EF41C6FD2BDB9AF80036F92E /* TaskCompletedView.swift in Sources */,
+				CD0B34782BDE353E002842E7 /* WorkoutManager.swift in Sources */,
 				EFAD787F2BD94BBD005061E3 /* ContentView.swift in Sources */,
 				EF41C7012BDBACF80036F92E /* TesterView.swift in Sources */,
 				EF41C6FF2BDBA3180036F92E /* HomeButton.swift in Sources */,
@@ -423,10 +429,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = F7WR45KMA2;
+				DEVELOPMENT_TEAM = B4MA3ZSJ87;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Grow-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display your saved workouts in MyWorkouts.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by MyWorkouts on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -434,7 +443,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestRunnn.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alfadli.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -454,10 +463,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = F7WR45KMA2;
+				DEVELOPMENT_TEAM = B4MA3ZSJ87;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Grow-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout related data will be used to display your saved workouts in MyWorkouts.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by MyWorkouts on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -465,7 +477,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestRunnn.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alfadli.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -483,11 +495,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F7WR45KMA2;
+				DEVELOPMENT_TEAM = B4MA3ZSJ87;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestRun.grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alfadli.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -503,11 +515,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F7WR45KMA2;
+				DEVELOPMENT_TEAM = B4MA3ZSJ87;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestRun.grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alfadli.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

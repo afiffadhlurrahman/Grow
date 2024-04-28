@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct GrowApp: App {
+    @StateObject var workoutManager = WorkoutManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(workoutManager)
 //            TaskCompletedView()
         }
     }

@@ -21,8 +21,11 @@ struct LevelCard: View {
         }
     }
     
+    @EnvironmentObject var workoutManager: WorkoutManager
+    
     var body: some View {
         Button {
+            workoutManager.selectedWorkout = .running
             Router.shared.path.append(.focusTree)
         } label: {
             HStack {

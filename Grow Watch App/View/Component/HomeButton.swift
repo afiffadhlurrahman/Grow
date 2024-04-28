@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeButton: View {
+    @EnvironmentObject var workoutManager: WorkoutManager
     var body: some View {
         ZStack{
             Circle()
@@ -15,6 +16,7 @@ struct HomeButton: View {
                 .frame(width: 50)
             
             Button(action: {
+                workoutManager.resetWorkout()
                 Router.shared.path.removeAll()
             }, label: {
                 Image(systemName: "house.fill")

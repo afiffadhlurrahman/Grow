@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct TesterView: View {
+    @EnvironmentObject var workoutManager: WorkoutManager
     var body: some View {
-        Text("masuk cuy!")
+        Text(
+                Measurement(
+                    value: workoutManager.distance,
+                    unit: UnitLength.meters
+                ).formatted(
+                    .measurement(
+                        width: .abbreviated,
+                        usage: .road
+                    )
+                )
+            )
     }
 }
 

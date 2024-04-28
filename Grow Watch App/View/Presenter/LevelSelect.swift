@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct LevelSelect: View {
-    @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var workoutManager: WorkoutManager
     @StateObject private var navPath = Router.shared
+    
+    var workoutTypes: [HKWorkoutActivityType] = [.running]
     
     var body: some View {
         VStack {
@@ -29,10 +32,29 @@ struct LevelSelect: View {
                         }
                 }
             }
-        }.background(Color(uiColor: UIColor(red: 0.78, green: 0.92, blue: 0.79, alpha: 1)))
+        }
+        .background(Color(uiColor: UIColor(red: 0.78, green: 0.92, blue: 0.79, alpha: 1)))
+        .onAppear {
+            workoutManager.requestAuthorization()
+        }
     }
 }
 
 #Preview {
     LevelSelect()
+}
+
+extension HKWorkoutActivityType: Identifiable {
+    public var id: UInt {
+        rawValue
+    }
+
+    var name: String {
+        switch self {
+        case .running:
+            return "Run"
+        default:
+            return ""
+        }
+    }
 }
