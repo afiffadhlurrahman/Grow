@@ -10,6 +10,7 @@ import SwiftUI
 struct LevelCard: View {
     var level: String
     var levelBackground: Color
+    var distance: Double // Tambahkan properti distance
     
     var levelIcon: String {
         if level == "easy" {
@@ -27,6 +28,7 @@ struct LevelCard: View {
         Button {
             workoutManager.selectedWorkout = .running
             Router.shared.path.append(.focusTree)
+            Router.shared.selectedLevelDistance = distance
         } label: {
             HStack {
                 Image(systemName: levelIcon)
@@ -57,5 +59,5 @@ struct LevelCard: View {
 }
 
 #Preview {
-    LevelCard(level: "easy", levelBackground: Color(red: 0.44, green: 0.69, blue: 0.52))
+    LevelCard(level: "easy", levelBackground: Color(red: 0.44, green: 0.69, blue: 0.52), distance: 30)
 }

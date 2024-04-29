@@ -10,6 +10,7 @@
 		4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */; };
 		4620FFAE2BDB886100B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFAD2BDB886100B2F1C9 /* SDWebImageLottieCoder */; };
 		4620FFB02BDB9EC500B2F1C9 /* TreeAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */; };
+		46AF71102BDFA1C000CFF819 /* Animation - 1714039557202.json in Resources */ = {isa = PBXBuildFile; fileRef = 46AF710F2BDFA1C000CFF819 /* Animation - 1714039557202.json */; };
 		CD0B34782BDE353E002842E7 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B34772BDE353E002842E7 /* WorkoutManager.swift */; };
 		CD2604A22BDCBC97005ED9EB /* LevelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2604A12BDCBC97005ED9EB /* LevelCard.swift */; };
 		CD5E17612BDD0F6600FB9A4B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5E17602BDD0F6600FB9A4B /* Router.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
 		4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TreeAnimation.json; sourceTree = "<group>"; };
+		46AF710F2BDFA1C000CFF819 /* Animation - 1714039557202.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Animation - 1714039557202.json"; sourceTree = "<group>"; };
 		CD0B34742BDE2FB1002842E7 /* Grow-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Grow-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CD0B34772BDE353E002842E7 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutManager.swift; path = "Grow Watch App/View/Component/WorkoutManager.swift"; sourceTree = SOURCE_ROOT; };
 		CD2604A12BDCBC97005ED9EB /* LevelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCard.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */,
+				46AF710F2BDFA1C000CFF819 /* Animation - 1714039557202.json */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFAD78842BD94BBE005061E3 /* Preview Assets.xcassets in Resources */,
+				46AF71102BDFA1C000CFF819 /* Animation - 1714039557202.json in Resources */,
 				EFAD78812BD94BBE005061E3 /* Assets.xcassets in Resources */,
 				EF41C7042BDCA3CE0036F92E /* lottieConfetti.json in Resources */,
 			);
@@ -429,7 +433,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = F7WR45KMA2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Grow-Watch-App-Info.plist";
@@ -443,7 +447,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestRunn.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rangga.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -463,7 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Grow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = F7WR45KMA2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Grow-Watch-App-Info.plist";
@@ -477,7 +481,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestRunn.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rangga.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -496,11 +500,11 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = F7WR45KMA2;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestRunn.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rangga.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -518,11 +522,11 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9HR48NXTG8;
+				DEVELOPMENT_TEAM = F7WR45KMA2;
 				INFOPLIST_KEY_CFBundleDisplayName = Grow;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forestRunn.Grow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rangga.Grow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;

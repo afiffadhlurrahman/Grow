@@ -14,13 +14,17 @@ struct LevelSelect: View {
     
     var workoutTypes: [HKWorkoutActivityType] = [.running]
     
+    let easyDistance: Double = 30 // Jarak untuk level easy
+    let mediumDistance: Double = 60 // Jarak untuk level medium
+    let hardDistance: Double = 90 // Jarak untuk level hard
+    
     var body: some View {
         VStack {
             NavigationStack (path: $navPath.path) {
                 List {
-                    LevelCard(level: "easy", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58))
-                    LevelCard(level: "medium", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58))
-                    LevelCard(level: "hard", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58))
+                    LevelCard(level: "easy", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58), distance: easyDistance)
+                    LevelCard(level: "medium", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58), distance: mediumDistance)
+                    LevelCard(level: "hard", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58), distance: hardDistance)
                 }
                 .listStyle(.carousel)
                 .navigationDestination(for: Router.Destination.self) { destination in

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FocusTree: View {
+    @State var lottieTree: String = "Animation - 1714039557202"
+
     @ObservedObject var viewModel: LottieViewModel = .init()
     @EnvironmentObject var workoutManager: WorkoutManager
     
@@ -30,7 +32,7 @@ struct FocusTree: View {
                     .foregroundColor(Color(red: 0.95, green: 0.88, blue: 0.82))
             })
             .background(Color(red: 0.51, green: 0.73, blue: 0.58))
-            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            .clipShape(Circle())
             .tag(Tab.controls)
             
             VStack {
@@ -48,16 +50,12 @@ struct FocusTree: View {
                                             .onTapGesture {
                                                 workoutManager.distance += 10
                                             }
-                                            .onAppear {
-                                                // Start animating the progress bar
-//                                                withAnimation(.linear(duration: 3)) { // Mengubah durasi menjadi 2 detik
-//                                                    self.progress = 1.0
-//                                                }
-                                            }
+
                                             .onChange(of: workoutManager.distance) { oldValue, newValue in
                                                 withAnimation(.linear(duration: 1)) { // Mengubah durasi menjadi 2 detik
                                                     if self.progress < 1 {
-                                                        self.progress = newValue / 30
+                                                        let selectedDistance = Router.shared.selectedLevelDistance // Ambil jarak yang dipilih dari Router
+                                                        self.progress = min(newValue / selectedDistance, 1.0)
                                                     } else {
                                                         Router.shared.path.append(.taskComplete)
                                                     }
@@ -76,8 +74,7 @@ struct FocusTree: View {
                             .onAppear {
                                 self.viewModel.speed = 2
                                 self.viewModel.lastFrame = 70
-                                self.viewModel.loadAnimation(url: URL(string: "https://lottie.host/892ef239-5e69-4385-9b46-a1d56de77971/iLbrJpNZu3.json")!)
-
+                                self.viewModel.loadAnimationFromFile(filename: lottieTree)
                             }
                         
                     }
