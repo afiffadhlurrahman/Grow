@@ -42,27 +42,27 @@ struct FocusTree: View {
                     // Progress Bar
                     ZStack {
                         VStack {
-                                        Spacer()
-                                        ProgressView(value: progress)
-                                            .progressViewStyle(CircularProgressViewStyle(tint: Color(red: 0.44, green: 0.69, blue: 0.52))) // Mengubah warna progress bar
-                                            .scaleEffect(2.5) // Memperbesar ukuran progress bar
-                                            .padding()
-                                            .onTapGesture {
-                                                workoutManager.distance += 10
-                                            }
+                            Spacer()
+                            ProgressView(value: progress)
+                                .progressViewStyle(CircularProgressViewStyle(tint: Color(red: 0.44, green: 0.69, blue: 0.52))) // Mengubah warna progress bar
+                                .scaleEffect(2.5) // Memperbesar ukuran progress bar
+                                .padding()
+                                .onTapGesture {
+                                    workoutManager.distance += 10
+                                }
 
-                                            .onChange(of: workoutManager.distance) { oldValue, newValue in
-                                                withAnimation(.linear(duration: 1)) { // Mengubah durasi menjadi 2 detik
-                                                    if self.progress < 1 {
-                                                        let selectedDistance = Router.shared.selectedLevelDistance // Ambil jarak yang dipilih dari Router
-                                                        self.progress = min(newValue / selectedDistance, 1.0)
-                                                    } else {
-                                                        Router.shared.path.append(.taskComplete)
-                                                    }
-                                                }
-                                            }
+                                .onChange(of: workoutManager.distance) { oldValue, newValue in
+                                    withAnimation(.linear(duration: 1)) { // Mengubah durasi menjadi 2 detik
+                                        if self.progress < 1 {
+                                            let selectedDistance = Router.shared.selectedLevelDistance // Ambil jarak yang dipilih dari Router
+                                            self.progress = min(newValue / selectedDistance, 1.0)
+                                        } else {
+                                            Router.shared.path.append(.taskComplete)
+                                        }
+                                    }
+                                }
 
-                                        Spacer()
+                            Spacer()
                         }
                         
                         // Animasi Lottie
@@ -72,36 +72,25 @@ struct FocusTree: View {
                             .frame(width: 80)
                             .padding() // Sesuaikan dengan kebutuhan
                             .onAppear {
-                                self.viewModel.speed = 2
-                                self.viewModel.lastFrame = 70
+                                self.viewModel.speed = 1
+                                self.viewModel.lastFrame = 45
+                                self.viewModel.workoutManager = workoutManager
                                 self.viewModel.loadAnimationFromFile(filename: lottieTree)
                             }
                         
                     }
                 })
-                Text(
-                        Measurement(
-                            value: workoutManager.distance,
-                            unit: UnitLength.meters
-                        ).formatted(
-                            .measurement(
-                                width: .abbreviated,
-                                usage: .road
-                            )
+                Text (
+                    Measurement (
+                        value: workoutManager.distance,
+                        unit: UnitLength.meters
+                    ).formatted (
+                        .measurement (
+                            width: .abbreviated,
+                            usage: .road
                         )
                     )
-                
-//                Text(
-//                    Measurement(
-//                        value: workoutManager.speed,
-//                        unit: UnitSpeed.kilometersPerHour
-//                    ).formatted(
-//                        .measurement(
-//                            width: .abbreviated,
-//                            numberFormatStyle: .number
-//                        )
-//                    )
-//                ).foregroundStyle(.black).font(.system(size: 32))
+                )
             }
             .tag(Tab.tree)
                 .buttonStyle(.borderless)

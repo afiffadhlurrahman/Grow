@@ -14,9 +14,9 @@ struct LevelSelect: View {
     
     var workoutTypes: [HKWorkoutActivityType] = [.running]
     
-    let easyDistance: Double = 30 // Jarak untuk level easy
-    let mediumDistance: Double = 60 // Jarak untuk level medium
-    let hardDistance: Double = 90 // Jarak untuk level hard
+    let easyDistance: Double = 45 // Jarak untuk level easy
+    let mediumDistance: Double = 90 // Jarak untuk level medium
+    let hardDistance: Double = 135 // Jarak untuk level hard
     
     var body: some View {
         VStack {

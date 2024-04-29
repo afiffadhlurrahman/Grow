@@ -99,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				CD0B34772BDE353E002842E7 /* WorkoutManager.swift */,
+				4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,7 +164,6 @@
 				4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */,
 				EFAD78802BD94BBE005061E3 /* Assets.xcassets */,
 				EFAD78822BD94BBE005061E3 /* Preview Content */,
-				4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */,
 			);
 			path = "Grow Watch App";
 			sourceTree = "<group>";

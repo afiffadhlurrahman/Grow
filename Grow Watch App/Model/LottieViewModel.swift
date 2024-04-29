@@ -20,6 +20,7 @@ class LottieViewModel: ObservableObject {
     private var playing: Bool = false
     var speed: Double = 1.0
     var lastFrame: UInt?
+    var workoutManager: WorkoutManager = WorkoutManager()
     
     /// Loads animation data
     /// - Parameter url: url of animation JSON
@@ -67,8 +68,16 @@ class LottieViewModel: ObservableObject {
     /// Replace current frame with next one
     private func nextFrame() {
 //        guard let coder = coder else { return }
-
-        currentFrame += 1
+        switch Router.shared.selectedLevelDistance {
+            case 45:
+                currentFrame = UInt(ceil(workoutManager.distance / 1))
+            case 90:
+                currentFrame = UInt(ceil(workoutManager.distance / 2))
+            case 135:
+                currentFrame = UInt(ceil(workoutManager.distance / 3))
+            default:
+                currentFrame = 0
+        }
         // make sure that current frame is within frame count
         // if reaches the end, we set it back to 0 so it loops
         if currentFrame == lastFrame {
@@ -83,7 +92,7 @@ class LottieViewModel: ObservableObject {
         playing = true
 
         animationTimer?.invalidate()
-        animationTimer = Timer.scheduledTimer(withTimeInterval: 0.05/speed, repeats: true, block: { (timer) in
+        animationTimer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true, block: { (timer) in
             guard self.playing else {
                 timer.invalidate()
                 return
