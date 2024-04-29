@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LevelCard: View {
-    var level: String
+    @Binding var level: String
+    
+    var setLevel: String
     var levelBackground: Color
     
     var levelIcon: String {
@@ -25,6 +27,7 @@ struct LevelCard: View {
     
     var body: some View {
         Button {
+            level = setLevel
             workoutManager.selectedWorkout = .running
             Router.shared.path.append(.focusTree)
         } label: {
@@ -54,8 +57,4 @@ struct LevelCard: View {
         .listItemTint(levelBackground)
         .buttonStyle(.borderless)
     }
-}
-
-#Preview {
-    LevelCard(level: "easy", levelBackground: Color(red: 0.44, green: 0.69, blue: 0.52))
 }
