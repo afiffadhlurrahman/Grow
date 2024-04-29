@@ -11,6 +11,8 @@ struct FocusTree: View {
     @ObservedObject var viewModel: LottieViewModel = .init()
     @EnvironmentObject var workoutManager: WorkoutManager
     
+    @State var lottieFocusTree: String = "lottieFocusTree"
+    
     @State private var progress: CGFloat = 0.0 // State untuk mengontrol progress bar
     
     @State private var selection: Tab = .tree
@@ -63,7 +65,7 @@ struct FocusTree: View {
                             .padding() // Sesuaikan dengan kebutuhan
                             .onAppear {
                                 self.viewModel.speed = 0.5
-                                self.viewModel.loadAnimation(url: URL(string: "https://lottie.host/892ef239-5e69-4385-9b46-a1d56de77971/iLbrJpNZu3.json")!)
+                                self.viewModel.loadAnimationFromFile(filename: lottieFocusTree)
 
                             }
                         
