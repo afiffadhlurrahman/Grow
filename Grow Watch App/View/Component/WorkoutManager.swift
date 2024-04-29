@@ -63,6 +63,7 @@ class WorkoutManager: NSObject, ObservableObject {
         // The quantity types to read from the health store.
         let typesToRead: Set = [
             HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!,
+            HKQuantityType.quantityType(forIdentifier: .runningSpeed)!,
         ]
 
         // Request authorization for those quantity types.
@@ -99,8 +100,9 @@ class WorkoutManager: NSObject, ObservableObject {
     // MARK: - Workout Metrics
     @Published var distance: Double = 0
     @Published var workout: HKWorkout?
+    @Published var speed: Double = 0
     
-    // fungsi untuk mengupdate interface jarak
+    // fungsi untuk mengupdate interface jarak dan kecepatan
     func updateForStatistics(_ statistics: HKStatistics?) {
         guard let statistics = statistics else { return }
 
@@ -109,6 +111,9 @@ class WorkoutManager: NSObject, ObservableObject {
             case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning):
                 let meterUnit = HKUnit.meter()
                 self.distance = statistics.sumQuantity()?.doubleValue(for: meterUnit) ?? 0
+            case HKQuantityType.quantityType(forIdentifier: .runningSpeed):
+                let speedUnit = HKUnit.meterUnit(with:.kilo).unitDivided(by: HKUnit.hour())
+                self.speed = statistics.mostRecentQuantity()?.doubleValue(for: speedUnit) ?? 0
             default:
                 return
             }
@@ -164,6 +169,7 @@ extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
 
             // Update the published values.
             updateForStatistics(statistics)
+            
         }
     }
 }

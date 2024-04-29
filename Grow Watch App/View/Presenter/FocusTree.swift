@@ -35,7 +35,7 @@ struct FocusTree: View {
             
             VStack {
                 Button (action: {
-                    Router.shared.path.append(.taskComplete)
+//                    Router.shared.path.append(.taskComplete)
                 }, label: {
                     // Progress Bar
                     ZStack {
@@ -45,10 +45,22 @@ struct FocusTree: View {
                                             .progressViewStyle(CircularProgressViewStyle(tint: Color(red: 0.44, green: 0.69, blue: 0.52))) // Mengubah warna progress bar
                                             .scaleEffect(2.5) // Memperbesar ukuran progress bar
                                             .padding()
+                                            .onTapGesture {
+                                                workoutManager.distance += 10
+                                            }
                                             .onAppear {
                                                 // Start animating the progress bar
-                                                withAnimation(.linear(duration: 3)) { // Mengubah durasi menjadi 2 detik
-                                                    self.progress = 1.0
+//                                                withAnimation(.linear(duration: 3)) { // Mengubah durasi menjadi 2 detik
+//                                                    self.progress = 1.0
+//                                                }
+                                            }
+                                            .onChange(of: workoutManager.distance) { oldValue, newValue in
+                                                withAnimation(.linear(duration: 1)) { // Mengubah durasi menjadi 2 detik
+                                                    if self.progress < 1 {
+                                                        self.progress = newValue / 30
+                                                    } else {
+                                                        Router.shared.path.append(.taskComplete)
+                                                    }
                                                 }
                                             }
 
@@ -62,7 +74,8 @@ struct FocusTree: View {
                             .frame(width: 80)
                             .padding() // Sesuaikan dengan kebutuhan
                             .onAppear {
-                                self.viewModel.speed = 0.5
+                                self.viewModel.speed = 2
+                                self.viewModel.lastFrame = 70
                                 self.viewModel.loadAnimation(url: URL(string: "https://lottie.host/892ef239-5e69-4385-9b46-a1d56de77971/iLbrJpNZu3.json")!)
 
                             }
@@ -80,6 +93,18 @@ struct FocusTree: View {
                             )
                         )
                     )
+                
+//                Text(
+//                    Measurement(
+//                        value: workoutManager.speed,
+//                        unit: UnitSpeed.kilometersPerHour
+//                    ).formatted(
+//                        .measurement(
+//                            width: .abbreviated,
+//                            numberFormatStyle: .number
+//                        )
+//                    )
+//                ).foregroundStyle(.black).font(.system(size: 32))
             }
             .tag(Tab.tree)
                 .buttonStyle(.borderless)
