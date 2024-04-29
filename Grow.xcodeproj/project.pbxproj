@@ -11,6 +11,7 @@
 		4620FFAE2BDB886100B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFAD2BDB886100B2F1C9 /* SDWebImageLottieCoder */; };
 		4620FFB02BDB9EC500B2F1C9 /* TreeAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */; };
 		CD0B34782BDE353E002842E7 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B34772BDE353E002842E7 /* WorkoutManager.swift */; };
+		CD177C072BDF6101001A8906 /* lottieFocusTree.json in Resources */ = {isa = PBXBuildFile; fileRef = CD177C062BDF6101001A8906 /* lottieFocusTree.json */; };
 		CD2604A22BDCBC97005ED9EB /* LevelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2604A12BDCBC97005ED9EB /* LevelCard.swift */; };
 		CD5E17612BDD0F6600FB9A4B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5E17602BDD0F6600FB9A4B /* Router.swift */; };
 		CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBCEDE2BDB8B380083D4C6 /* LevelSelect.swift */; };
@@ -55,6 +56,7 @@
 		4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TreeAnimation.json; sourceTree = "<group>"; };
 		CD0B34742BDE2FB1002842E7 /* Grow-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Grow-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CD0B34772BDE353E002842E7 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutManager.swift; path = "Grow Watch App/View/Component/WorkoutManager.swift"; sourceTree = SOURCE_ROOT; };
+		CD177C062BDF6101001A8906 /* lottieFocusTree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = lottieFocusTree.json; path = ../../../../../../../Downloads/lottieFocusTree.json; sourceTree = "<group>"; };
 		CD2604A12BDCBC97005ED9EB /* LevelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCard.swift; sourceTree = "<group>"; };
 		CD5E175F2BDD058C00FB9A4B /* Grow Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Grow Watch App.entitlements"; sourceTree = "<group>"; };
 		CD5E17602BDD0F6600FB9A4B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */,
+				CD177C062BDF6101001A8906 /* lottieFocusTree.json */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFAD78842BD94BBE005061E3 /* Preview Assets.xcassets in Resources */,
+				CD177C072BDF6101001A8906 /* lottieFocusTree.json in Resources */,
 				EFAD78812BD94BBE005061E3 /* Assets.xcassets in Resources */,
 				EF41C7042BDCA3CE0036F92E /* lottieConfetti.json in Resources */,
 			);

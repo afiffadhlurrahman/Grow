@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FocusTree: View {
     @ObservedObject var viewModel: LottieViewModel = .init()
+    @State var lottieFocusTree: String = "lottieFocusTree"
+
     @EnvironmentObject var workoutManager: WorkoutManager
     
     @State private var progress: CGFloat = 0.0 // State untuk mengontrol progress bar
@@ -60,7 +62,7 @@ struct FocusTree: View {
                                 .scaleEffect(2.5) // Memperbesar ukuran progress bar
                                 .padding()
                                 .onChange(of: workoutManager.distance) { oldValue, newValue in
-                                    withAnimation(.linear(duration: 1)) { // Mengubah durasi menjadi 2 detik
+                                    withAnimation(.linear(duration: 1)) { // Mengubah durasi menjadi 1 detik
                                         if self.progress < 1 {
                                             self.progress = newValue / target
                                         } else {
@@ -78,6 +80,14 @@ struct FocusTree: View {
                             .scaledToFit()
                             .frame(width: 80)
                             .padding() // Sesuaikan dengan kebutuhan
+                            .onAppear {
+                                self.viewModel.speed = 0.5
+                                self.viewModel.lastFrame = 130
+                                self.viewModel.loadAnimationFromFile(filename: lottieFocusTree)
+                            }
+                            .onTapGesture {
+                                workoutManager.distance += 4
+                            }
                         
                     }
                 })

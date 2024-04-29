@@ -14,12 +14,15 @@ struct LevelCard: View {
     var levelBackground: Color
     
     var levelIcon: String {
-        if level == "easy" {
+        switch setLevel {
+        case "easy":
             return "dial.low.fill"
-        } else if level == "medium" {
+        case "medium":
             return "dial.medium.fill"
-        } else {
+        case "hard":
             return "dial.high.fill"
+        default:
+            return ""
         }
     }
     
