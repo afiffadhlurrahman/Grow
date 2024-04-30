@@ -8,7 +8,7 @@
 import SwiftUI
 
 class Router: ObservableObject {
-    var selectedLevelDistance: Double = 30
+    var selectedLevelDistance: Double = 0
     enum Destination: String, Hashable {
         case focusTree, taskComplete
     }

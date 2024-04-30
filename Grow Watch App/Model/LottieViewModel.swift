@@ -51,9 +51,10 @@ class LottieViewModel: ObservableObject {
         coder = SDImageLottieCoder(animatedImageData: data, options: [SDImageCoderOption.decodeLottieResourcePath: Bundle.main.resourcePath!])
         
         // resets to first frame
-        currentFrame = 0
+        currentFrame = 2
         setImage(frame: currentFrame)
         
+        print("Sebelum play: \(currentFrame)")
         play()
     }
     
@@ -68,7 +69,8 @@ class LottieViewModel: ObservableObject {
     /// Replace current frame with next one
     private func nextFrame() {
 //        guard let coder = coder else { return }
-        switch Router.shared.selectedLevelDistance {
+        print(Router.shared.selectedLevelDistance)
+        switch UInt(Router.shared.selectedLevelDistance) {
             case 45:
                 currentFrame = UInt(ceil(workoutManager.distance / 1))
             case 90:
@@ -76,12 +78,15 @@ class LottieViewModel: ObservableObject {
             case 135:
                 currentFrame = UInt(ceil(workoutManager.distance / 3))
             default:
-                currentFrame = 0
+                print("CurrentFrame = \(currentFrame)")
+                currentFrame += 1
         }
         // make sure that current frame is within frame count
         // if reaches the end, we set it back to 0 so it loops
         if currentFrame == lastFrame {
             currentFrame = 0
+        } else if currentFrame < 2 {
+            currentFrame = 2
         }
         
         setImage(frame: currentFrame)
@@ -92,11 +97,13 @@ class LottieViewModel: ObservableObject {
         playing = true
 
         animationTimer?.invalidate()
+        print("sebelum timer = \(self.currentFrame)")
         animationTimer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true, block: { (timer) in
             guard self.playing else {
                 timer.invalidate()
                 return
             }
+            print("sebelum next frame = \(self.currentFrame)")
             self.nextFrame()
         })
     }

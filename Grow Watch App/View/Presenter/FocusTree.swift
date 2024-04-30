@@ -41,22 +41,22 @@ struct FocusTree: View {
                 }, label: {
                     // Progress Bar
                     ZStack {
+                        
+                        
+                        
                         VStack {
                             Spacer()
                             ProgressView(value: progress)
                                 .progressViewStyle(CircularProgressViewStyle(tint: Color(red: 0.44, green: 0.69, blue: 0.52))) // Mengubah warna progress bar
                                 .scaleEffect(2.5) // Memperbesar ukuran progress bar
                                 .padding()
-                                .onTapGesture {
-                                    workoutManager.distance += 10
-                                }
-
                                 .onChange(of: workoutManager.distance) { oldValue, newValue in
                                     withAnimation(.linear(duration: 1)) { // Mengubah durasi menjadi 2 detik
                                         if self.progress < 1 {
                                             let selectedDistance = Router.shared.selectedLevelDistance // Ambil jarak yang dipilih dari Router
                                             self.progress = min(newValue / selectedDistance, 1.0)
                                         } else {
+                                            Router.shared.selectedLevelDistance = 0
                                             Router.shared.path.append(.taskComplete)
                                         }
                                     }
@@ -80,17 +80,6 @@ struct FocusTree: View {
                         
                     }
                 })
-                Text (
-                    Measurement (
-                        value: workoutManager.distance,
-                        unit: UnitLength.meters
-                    ).formatted (
-                        .measurement (
-                            width: .abbreviated,
-                            usage: .road
-                        )
-                    )
-                )
             }
             .tag(Tab.tree)
                 .buttonStyle(.borderless)

@@ -9,21 +9,21 @@ import SwiftUI
 
 struct TaskCompletedView: View {
     @State var lottieConfetti: String = "lottieConfetti"
-    @ObservedObject var viewModel: LottieViewModel = .init()
+    @ObservedObject var viewModelConfetti: LottieViewModel = .init()
     
     var body: some View {
             ZStack{
                 // Color(red: 0.78, green: 0.92, blue: 0.79)
                 
                 // Confetti
-                Image(uiImage: viewModel.image)
+                Image(uiImage: viewModelConfetti.image)
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFit()
                     .onAppear {
-                        self.viewModel.speed = 10
-                        self.viewModel.lastFrame = 130
-                        self.viewModel.loadAnimationFromFile(filename: lottieConfetti)
+                        self.viewModelConfetti.speed = 0.05/2
+                        self.viewModelConfetti.lastFrame = 130
+                        self.viewModelConfetti.loadAnimationFromFile(filename: lottieConfetti)
                     }
                 
                 
