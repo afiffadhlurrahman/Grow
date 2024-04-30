@@ -9,19 +9,27 @@ import SwiftUI
 
 struct FocusTree: View {
     @State var lottieTree: String = "Animation - 1714039557202"
+    @State var lottieRunningBoy: String = "Running Boy"
 
     @ObservedObject var viewModel: LottieViewModel = .init()
+    @ObservedObject var viewModelTemplate: TemplateLottieViewModel = .init()
     @EnvironmentObject var workoutManager: WorkoutManager
     
     @State private var progress: CGFloat = 0.0 // State untuk mengontrol progress bar
     
     @State private var selection: Tab = .tree
+    
+    @State private var trigger: Trigger? = Trigger(id: "showSheet")
 
     enum Tab {
         case controls, tree
     }
     
     var body: some View {
+        
+                
+        
+        
         TabView (selection: $selection) {
             Button(action: {
                 workoutManager.endWorkout()
@@ -86,8 +94,53 @@ struct FocusTree: View {
             
         }
         .navigationBarBackButtonHidden()
+        .onAppear{
+            self.trigger = Trigger(id: "showSheet")
+        }
+        .sheet(item: $trigger) { detail in
+            ScrollView{
+                VStack(alignment: .center, spacing: 5) {
+                    
+                    Image("Tree Start")
+                    
+                    Image(systemName: "arrow.down")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .foregroundStyle(Color.white)
+                    
+                    // Animasi Lottie
+                    Image(uiImage: viewModelTemplate.image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80)
+                        .onAppear {
+                            self.viewModelTemplate.loadAnimationFromFile(filename: lottieRunningBoy)
+                        }
+                    
+                    Image(systemName: "arrow.down")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .foregroundStyle(Color.white)
+                    
+                    Image("Tree On Progress")
+                    
+                    
+                }
+            }
+            
+            .onTapGesture {
+                trigger = nil
+            }
+        }
         
     }
+    
+}
+
+struct Trigger: Identifiable {
+    var id: String
 }
 
 #Preview {
