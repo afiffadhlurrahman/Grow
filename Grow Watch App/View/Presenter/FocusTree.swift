@@ -65,6 +65,7 @@ struct FocusTree: View {
                                             self.progress = min(newValue / selectedDistance, 1.0)
                                         } else {
                                             Router.shared.selectedLevelDistance = 0
+                                            WKInterfaceDevice.current().play(.notification)
                                             Router.shared.path.append(.taskComplete)
                                         }
                                     }
@@ -85,6 +86,9 @@ struct FocusTree: View {
                                 self.viewModel.workoutManager = workoutManager
                                 self.viewModel.loadAnimationFromFile(filename: lottieTree)
                             }
+                            .onTapGesture {
+                                workoutManager.distance += 15
+                            }
                         
                     }
                 })
@@ -101,32 +105,35 @@ struct FocusTree: View {
             ScrollView{
                 VStack(alignment: .center, spacing: 5) {
                     
-                    Image("Tree Start")
+                    HStack {
+                        Image("Tree Start")
+                            .resizable()
+                            .scaledToFit()
+                        Image(systemName: "arrow.down")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30, alignment: .center)
+                            .foregroundStyle(Color.white)
+                    }
                     
-                    Image(systemName: "arrow.down")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 40, height: 40, alignment: .center)
-                        .foregroundStyle(Color.white)
-                    
-                    // Animasi Lottie
-                    Image(uiImage: viewModelTemplate.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 80)
-                        .onAppear {
-                            self.viewModelTemplate.loadAnimationFromFile(filename: lottieRunningBoy)
-                        }
-                    
-                    Image(systemName: "arrow.down")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 40, height: 40, alignment: .center)
-                        .foregroundStyle(Color.white)
+                    HStack {
+                        // Animasi Lottie
+                        Image(uiImage: viewModelTemplate.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80)
+                            .onAppear {
+                                self.viewModelTemplate.loadAnimationFromFile(filename: lottieRunningBoy)
+                            }
+                        
+                        Image(systemName: "arrow.down")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30, height: 30, alignment: .center)
+                            .foregroundStyle(Color.white)
+                    }
                     
                     Image("Tree On Progress")
-                    
-                    
                 }
             }
             
