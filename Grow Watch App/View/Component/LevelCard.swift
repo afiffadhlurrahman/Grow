@@ -14,11 +14,11 @@ struct LevelCard: View {
     
     var levelIcon: String {
         if level == "easy" {
-            return "dial.low.fill"
+            return "Level Easy"
         } else if level == "medium" {
-            return "dial.medium.fill"
+            return "Level Medium"
         } else {
-            return "dial.high.fill"
+            return "Level Hard"
         }
     }
     
@@ -32,7 +32,7 @@ struct LevelCard: View {
             Router.shared.selectedLevel = level
         } label: {
             HStack {
-                Image(systemName: levelIcon)
+                Image(levelIcon)
                     .font(.system(size: 36))
                     .foregroundColor(Color(red: 0.95, green: 0.88, blue: 0.82))
                 Spacer()
