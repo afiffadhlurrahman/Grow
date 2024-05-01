@@ -30,10 +30,31 @@ struct TaskCompletedView: View {
                 VStack(spacing: 10){
                     // Tree
                     ZStack{
-                        Image("defaultIcon")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200)
+                        
+                        switch Router.shared.selectedLevel {
+                        case "easy":
+                            Image("Tree Easy")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200)
+                            
+                        case "medium":
+                            Image("Tree Medium")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200)
+                            
+                        case "hard":
+                            Image("Tree Hard")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200)
+                        default:
+                            Image("defaultIcon")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200)
+                        }
                     }
                     
                     // Button

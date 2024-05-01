@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct FocusTree: View {
-    @State var lottieTree: String = "Animation - 1714039557202"
+    @State var lottieTreeEasy: String = "TreeEasy"
+    @State var lottieTreeMedium: String = "TreeMedium"
+    @State var lottieTreeHard: String = "TreeHard"
+    
+    
     @State var lottieRunningBoy: String = "Running Boy"
 
     @ObservedObject var viewModel: LottieViewModel = .init()
@@ -84,12 +88,19 @@ struct FocusTree: View {
                                 self.viewModel.speed = 1
                                 self.viewModel.lastFrame = 45
                                 self.viewModel.workoutManager = workoutManager
-                                self.viewModel.loadAnimationFromFile(filename: lottieTree)
+                                
+                                switch Router.shared.selectedLevel {
+                                case "easy":
+                                    self.viewModel.loadAnimationFromFile(filename: lottieTreeEasy)
+                                case "medium":
+                                    self.viewModel.loadAnimationFromFile(filename: lottieTreeMedium)
+                                case "hard":
+                                    self.viewModel.loadAnimationFromFile(filename: lottieTreeHard)
+                                default:
+                                    break
+                                }
+                                                                
                             }
-                            .onTapGesture {
-                                workoutManager.distance += 15
-                            }
-                        
                     }
                 })
             }

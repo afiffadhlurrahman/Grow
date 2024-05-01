@@ -10,9 +10,11 @@
 		4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */; };
 		4620FFAE2BDB886100B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFAD2BDB886100B2F1C9 /* SDWebImageLottieCoder */; };
 		4620FFB02BDB9EC500B2F1C9 /* TreeAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */; };
-		46AF71102BDFA1C000CFF819 /* Animation - 1714039557202.json in Resources */ = {isa = PBXBuildFile; fileRef = 46AF710F2BDFA1C000CFF819 /* Animation - 1714039557202.json */; };
+		46AF71102BDFA1C000CFF819 /* TreeEasy.json in Resources */ = {isa = PBXBuildFile; fileRef = 46AF710F2BDFA1C000CFF819 /* TreeEasy.json */; };
 		46AFB3F82BE16788009E5626 /* Running Boy.json in Resources */ = {isa = PBXBuildFile; fileRef = 46AFB3F72BE16788009E5626 /* Running Boy.json */; };
 		46AFB4042BE16CB4009E5626 /* TemplateLottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AFB4032BE16CB4009E5626 /* TemplateLottieViewModel.swift */; };
+		46E9DAC22BE268B900AA36DB /* TreeMedium.json in Resources */ = {isa = PBXBuildFile; fileRef = 46E9DAC12BE268B900AA36DB /* TreeMedium.json */; };
+		46E9DAC42BE268BE00AA36DB /* TreeHard.json in Resources */ = {isa = PBXBuildFile; fileRef = 46E9DAC32BE268BE00AA36DB /* TreeHard.json */; };
 		CD0B34782BDE353E002842E7 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B34772BDE353E002842E7 /* WorkoutManager.swift */; };
 		CD2604A22BDCBC97005ED9EB /* LevelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2604A12BDCBC97005ED9EB /* LevelCard.swift */; };
 		CD5E17612BDD0F6600FB9A4B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5E17602BDD0F6600FB9A4B /* Router.swift */; };
@@ -56,9 +58,11 @@
 /* Begin PBXFileReference section */
 		4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
 		4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TreeAnimation.json; sourceTree = "<group>"; };
-		46AF710F2BDFA1C000CFF819 /* Animation - 1714039557202.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Animation - 1714039557202.json"; sourceTree = "<group>"; };
+		46AF710F2BDFA1C000CFF819 /* TreeEasy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TreeEasy.json; sourceTree = "<group>"; };
 		46AFB3F72BE16788009E5626 /* Running Boy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Running Boy.json"; sourceTree = "<group>"; };
 		46AFB4032BE16CB4009E5626 /* TemplateLottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateLottieViewModel.swift; sourceTree = "<group>"; };
+		46E9DAC12BE268B900AA36DB /* TreeMedium.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TreeMedium.json; sourceTree = "<group>"; };
+		46E9DAC32BE268BE00AA36DB /* TreeHard.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TreeHard.json; sourceTree = "<group>"; };
 		CD0B34742BDE2FB1002842E7 /* Grow-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Grow-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CD0B34772BDE353E002842E7 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutManager.swift; path = "Grow Watch App/View/Component/WorkoutManager.swift"; sourceTree = SOURCE_ROOT; };
 		CD2604A12BDCBC97005ED9EB /* LevelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCard.swift; sourceTree = "<group>"; };
@@ -134,7 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				EF41C7032BDCA3CE0036F92E /* lottieConfetti.json */,
-				46AF710F2BDFA1C000CFF819 /* Animation - 1714039557202.json */,
+				46AF710F2BDFA1C000CFF819 /* TreeEasy.json */,
+				46E9DAC12BE268B900AA36DB /* TreeMedium.json */,
+				46E9DAC32BE268BE00AA36DB /* TreeHard.json */,
 				46AFB3F72BE16788009E5626 /* Running Boy.json */,
 			);
 			path = Assets;
@@ -276,9 +282,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFAD78842BD94BBE005061E3 /* Preview Assets.xcassets in Resources */,
-				46AF71102BDFA1C000CFF819 /* Animation - 1714039557202.json in Resources */,
+				46E9DAC42BE268BE00AA36DB /* TreeHard.json in Resources */,
+				46AF71102BDFA1C000CFF819 /* TreeEasy.json in Resources */,
 				EFAD78812BD94BBE005061E3 /* Assets.xcassets in Resources */,
 				EF41C7042BDCA3CE0036F92E /* lottieConfetti.json in Resources */,
+				46E9DAC22BE268B900AA36DB /* TreeMedium.json in Resources */,
 				46AFB3F82BE16788009E5626 /* Running Boy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,6 +29,7 @@ struct LevelCard: View {
             workoutManager.selectedWorkout = .running
             Router.shared.path.append(.focusTree)
             Router.shared.selectedLevelDistance = distance
+            Router.shared.selectedLevel = level
         } label: {
             HStack {
                 Image(systemName: levelIcon)
