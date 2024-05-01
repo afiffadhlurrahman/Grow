@@ -11,6 +11,9 @@ class Router: ObservableObject {
     var selectedLevelDistance: Double = 0
     var selectedLevel: String = "easy"
     
+    // List of obtained trees
+    @Published var obtainedTrees: [String] = []
+    
     
     
     enum Destination: String, Hashable {

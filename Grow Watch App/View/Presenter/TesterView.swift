@@ -10,6 +10,7 @@ import SwiftUI
 struct TesterView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     var body: some View {
+        
         Text(
                 Measurement(
                     value: workoutManager.distance,
