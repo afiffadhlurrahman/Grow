@@ -9,9 +9,6 @@ import SwiftUI
 import HealthKit
 
 struct LevelSelect: View {
-    @EnvironmentObject var workoutManager: WorkoutManager
-    @StateObject private var navPath = Router.shared
-    
     var workoutTypes: [HKWorkoutActivityType] = [.running]
     
     let easyDistance: Double = 45 // Jarak untuk level easy
@@ -20,29 +17,14 @@ struct LevelSelect: View {
     
     var body: some View {
         VStack {
-            NavigationStack (path: $navPath.path) {
-                
-                List {
-                    LevelCard(level: "easy", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58), distance: easyDistance)
-                    LevelCard(level: "medium", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58), distance: mediumDistance)
-                    LevelCard(level: "hard", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58), distance: hardDistance)
-                }
-                
-                .listStyle(.carousel)
-                .navigationDestination(for: Router.Destination.self) { destination in
-                        switch destination {
-                            case .focusTree:
-                                FocusTree()
-                            case .taskComplete:
-                                TaskCompletedView()
-                        }
-                }
+            List {
+                LevelCard(level: "easy", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58), distance: easyDistance)
+                LevelCard(level: "medium", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58), distance: mediumDistance)
+                LevelCard(level: "hard", levelBackground: Color(red: 0.54, green: 0.73, blue: 0.58), distance: hardDistance)
             }
+            
         }
         .background(Color(uiColor: UIColor(red: 0.78, green: 0.92, blue: 0.79, alpha: 1)))
-        .onAppear {
-            workoutManager.requestAuthorization()
-        }
     }
 }
 

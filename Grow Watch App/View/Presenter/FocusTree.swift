@@ -31,9 +31,6 @@ struct FocusTree: View {
     
     var body: some View {
         
-                
-        
-        
         TabView (selection: $selection) {
             Button(action: {
                 workoutManager.endWorkout()
@@ -157,9 +154,8 @@ struct FocusTree: View {
                 trigger = nil
             }
         }
-        
+        .background(Color(uiColor: UIColor(red: 0.78, green: 0.92, blue: 0.79, alpha: 1)))
     }
-    
 }
 
 struct Trigger: Identifiable {

@@ -17,7 +17,7 @@ class Router: ObservableObject {
     
     
     enum Destination: String, Hashable {
-        case focusTree, taskComplete
+        case focusTree, taskComplete, levelSelect
     }
     
     @Published var path: [Destination] = []

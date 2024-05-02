@@ -90,6 +90,7 @@ struct TaskCompletedView: View {
         .buttonStyle(.borderless)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
+        .background(Color(uiColor: UIColor(red: 0.78, green: 0.92, blue: 0.79, alpha: 1)))
     }
 }
 

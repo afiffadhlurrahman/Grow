@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct TreeGardenView: View {
+    @StateObject private var navPath = Router.shared
+    @EnvironmentObject var workoutManager: WorkoutManager
     var body: some View {
         ZStack{
             Image("Garden")
@@ -9,23 +11,44 @@ struct TreeGardenView: View {
                 .ignoresSafeArea()
             
             // Menampilkan koleksi Tree
-            VStack(alignment: .center, spacing: 1) {
-                
-                ForEach(0..<Router.shared.obtainedTrees.count / 3 + 1, id: \.self) { row in
-                    HStack(alignment: .firstTextBaseline, spacing: 1) {
-                        ForEach(getTreeIndices(forRow: row), id: \.self) { index in
-                            Image(Router.shared.obtainedTrees[index])
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 50, height: 100)
+            NavigationStack (path: $navPath.path) {
+                VStack(alignment: .center, spacing: 1) {
+                    
+                    ForEach(0..<Router.shared.obtainedTrees.count / 3 + 1, id: \.self) { row in
+                        HStack(alignment: .firstTextBaseline, spacing: 1) {
+                            ForEach(getTreeIndices(forRow: row), id: \.self) { index in
+                                Image(Router.shared.obtainedTrees[index])
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 50, height: 100)
+                            }
+                            
                         }
+                        .offset(x:CGFloat(row) * 1, y: CGFloat(row) * 0)
                         
                     }
-                    .offset(x:CGFloat(row) * 1, y: CGFloat(row) * 0)
+                    if Router.shared.path.isEmpty {
+                        PlayButton() 
+                    } else {
+                        HomeButton()
+                    }
                     
                 }
-                HomeButton()
+                .listStyle(.carousel)
+                .navigationDestination(for: Router.Destination.self) { destination in
+                        switch destination {
+                            case .focusTree:
+                                FocusTree()
+                            case .taskComplete:
+                                TaskCompletedView()
+                            case .levelSelect:
+                                LevelSelect()
+                        }
+                }
             }
+        }
+        .onAppear {
+            workoutManager.requestAuthorization()
         }
     }
     
