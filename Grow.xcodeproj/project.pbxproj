@@ -10,6 +10,7 @@
 		4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */; };
 		4620FFAE2BDB886100B2F1C9 /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 4620FFAD2BDB886100B2F1C9 /* SDWebImageLottieCoder */; };
 		4620FFB02BDB9EC500B2F1C9 /* TreeAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */; };
+		4665D0B62BE2B9F500751AD3 /* TreeGardenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4665D0B52BE2B9F500751AD3 /* TreeGardenView.swift */; };
 		46AF71102BDFA1C000CFF819 /* TreeEasy.json in Resources */ = {isa = PBXBuildFile; fileRef = 46AF710F2BDFA1C000CFF819 /* TreeEasy.json */; };
 		46AFB3F82BE16788009E5626 /* Running Boy.json in Resources */ = {isa = PBXBuildFile; fileRef = 46AFB3F72BE16788009E5626 /* Running Boy.json */; };
 		46AFB4042BE16CB4009E5626 /* TemplateLottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AFB4032BE16CB4009E5626 /* TemplateLottieViewModel.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		4620FFAA2BDB646400B2F1C9 /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
 		4620FFAF2BDB9EC500B2F1C9 /* TreeAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TreeAnimation.json; sourceTree = "<group>"; };
+		4665D0B52BE2B9F500751AD3 /* TreeGardenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeGardenView.swift; sourceTree = "<group>"; };
 		46AF710F2BDFA1C000CFF819 /* TreeEasy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TreeEasy.json; sourceTree = "<group>"; };
 		46AFB3F72BE16788009E5626 /* Running Boy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Running Boy.json"; sourceTree = "<group>"; };
 		46AFB4032BE16CB4009E5626 /* TemplateLottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateLottieViewModel.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				CDEE0E442BDBD8E30066CA9F /* FocusTree.swift */,
 				EF41C6FC2BDB9AF80036F92E /* TaskCompletedView.swift */,
 				EF41C7002BDBACF80036F92E /* TesterView.swift */,
+				4665D0B52BE2B9F500751AD3 /* TreeGardenView.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			files = (
 				CDC578242BDC892A00EEB5A0 /* LevelSelect.swift in Sources */,
 				4620FFAB2BDB646400B2F1C9 /* LottieViewModel.swift in Sources */,
+				4665D0B62BE2B9F500751AD3 /* TreeGardenView.swift in Sources */,
 				CD5E17612BDD0F6600FB9A4B /* Router.swift in Sources */,
 				EF41C6FD2BDB9AF80036F92E /* TaskCompletedView.swift in Sources */,
 				CD0B34782BDE353E002842E7 /* WorkoutManager.swift in Sources */,

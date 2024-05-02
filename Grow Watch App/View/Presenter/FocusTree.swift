@@ -69,6 +69,10 @@ struct FocusTree: View {
                                             self.progress = min(newValue / selectedDistance, 1.0)
                                         } else {
                                             Router.shared.selectedLevelDistance = 0
+                                            let selectedLevel = Router.shared.selectedLevel
+                                            
+                                            Router.shared.obtainedTrees.append("Tree \(selectedLevel.capitalized)")
+                                            
                                             WKInterfaceDevice.current().play(.notification)
                                             Router.shared.path.append(.taskComplete)
                                         }
@@ -76,6 +80,7 @@ struct FocusTree: View {
                                 }
 
                             Spacer()
+                            
                         }
                         
                         // Animasi Lottie

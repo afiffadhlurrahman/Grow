@@ -57,8 +57,34 @@ struct TaskCompletedView: View {
                         }
                     }
                     
+                    HStack{
+                        
+                        HomeButton()
+                        
+                        
+                        NavigationLink(destination: TreeGardenView()) {
+                            ZStack{
+                                Circle()
+                                    .foregroundColor(Color(red: 0.44, green: 0.69, blue: 0.52))
+                                    .frame(width: 50)
+                                
+                                Image(systemName: "tree.fill")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 27)
+                                    .foregroundColor(.white)
+                            }
+                            
+                        }
+                    }
+                    
                     // Button
-                    HomeButton()
+                                    
+                                        
+                                    
+                    
+                    // Button
+                    
                 }
         }
         .buttonStyle(.borderless)
