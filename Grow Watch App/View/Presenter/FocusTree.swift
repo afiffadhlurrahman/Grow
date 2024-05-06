@@ -16,7 +16,9 @@ struct FocusTree: View {
     @State var lottieRunningBoy: String = "Running Boy"
 
     @ObservedObject var viewModel: LottieViewModel = .init()
+  
     @ObservedObject var viewModelTemplate: TemplateLottieViewModel = .init()
+  
     @EnvironmentObject var workoutManager: WorkoutManager
     
     @State private var progress: CGFloat = 0.0 // State untuk mengontrol progress bar
@@ -71,13 +73,13 @@ struct FocusTree: View {
                                             Router.shared.obtainedTrees.append("Tree \(selectedLevel.capitalized)")
                                             
                                             WKInterfaceDevice.current().play(.notification)
+                                          
                                             Router.shared.path.append(.taskComplete)
                                         }
                                     }
                                 }
 
                             Spacer()
-                            
                         }
                         
                         // Animasi Lottie
@@ -101,7 +103,6 @@ struct FocusTree: View {
                                 default:
                                     break
                                 }
-                                                                
                             }
                     }
                 })
@@ -164,6 +165,6 @@ struct Trigger: Identifiable {
 
 #Preview {
     NavigationStack {
-        FocusTree()
+        FocusTree(level: "easy")
     }
 }

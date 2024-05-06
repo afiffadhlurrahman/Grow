@@ -99,6 +99,7 @@ class WorkoutManager: NSObject, ObservableObject {
     
     // MARK: - Workout Metrics
     @Published var distance: Double = 0
+    @Published var speed: Double = 0
     @Published var workout: HKWorkout?
     @Published var speed: Double = 0
     
@@ -126,6 +127,7 @@ class WorkoutManager: NSObject, ObservableObject {
         session = nil
         workout = nil
         distance = 0
+        speed = 0
     }
 }
 

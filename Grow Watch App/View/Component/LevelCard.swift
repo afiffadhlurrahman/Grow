@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LevelCard: View {
-    var level: String
+    @Binding var level: String
+    
+    var setLevel: String
     var levelBackground: Color
     var distance: Double // Tambahkan properti distance
     
@@ -26,6 +28,7 @@ struct LevelCard: View {
     
     var body: some View {
         Button {
+            level = setLevel
             workoutManager.selectedWorkout = .running
             Router.shared.path.append(.focusTree)
             Router.shared.selectedLevelDistance = distance
