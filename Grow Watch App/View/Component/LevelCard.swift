@@ -12,17 +12,15 @@ struct LevelCard: View {
     
     var setLevel: String
     var levelBackground: Color
+    var distance: Double // Tambahkan properti distance
     
     var levelIcon: String {
-        switch setLevel {
-        case "easy":
-            return "dial.low.fill"
-        case "medium":
-            return "dial.medium.fill"
-        case "hard":
-            return "dial.high.fill"
-        default:
-            return ""
+        if level == "easy" {
+            return "Level Easy"
+        } else if level == "medium" {
+            return "Level Medium"
+        } else {
+            return "Level Hard"
         }
     }
     
@@ -33,9 +31,11 @@ struct LevelCard: View {
             level = setLevel
             workoutManager.selectedWorkout = .running
             Router.shared.path.append(.focusTree)
+            Router.shared.selectedLevelDistance = distance
+            Router.shared.selectedLevel = level
         } label: {
             HStack {
-                Image(systemName: levelIcon)
+                Image(levelIcon)
                     .font(.system(size: 36))
                     .foregroundColor(Color(red: 0.95, green: 0.88, blue: 0.82))
                 Spacer()
@@ -60,4 +60,8 @@ struct LevelCard: View {
         .listItemTint(levelBackground)
         .buttonStyle(.borderless)
     }
+}
+
+#Preview {
+    LevelCard(level: "easy", levelBackground: Color(red: 0.44, green: 0.69, blue: 0.52), distance: 30)
 }

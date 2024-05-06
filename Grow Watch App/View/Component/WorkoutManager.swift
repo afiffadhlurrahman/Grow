@@ -101,8 +101,9 @@ class WorkoutManager: NSObject, ObservableObject {
     @Published var distance: Double = 0
     @Published var speed: Double = 0
     @Published var workout: HKWorkout?
+    @Published var speed: Double = 0
     
-    // fungsi untuk mengupdate interface jarak
+    // fungsi untuk mengupdate interface jarak dan kecepatan
     func updateForStatistics(_ statistics: HKStatistics?) {
         guard let statistics = statistics else { return }
 
@@ -112,7 +113,7 @@ class WorkoutManager: NSObject, ObservableObject {
                 let meterUnit = HKUnit.meter()
                 self.distance = statistics.sumQuantity()?.doubleValue(for: meterUnit) ?? 0
             case HKQuantityType.quantityType(forIdentifier: .runningSpeed):
-                let speedUnit = HKUnit.meter().unitDivided(by: HKUnit.second())
+                let speedUnit = HKUnit.meterUnit(with:.kilo).unitDivided(by: HKUnit.hour())
                 self.speed = statistics.mostRecentQuantity()?.doubleValue(for: speedUnit) ?? 0
             default:
                 return
@@ -170,6 +171,7 @@ extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
 
             // Update the published values.
             updateForStatistics(statistics)
+            
         }
     }
 }

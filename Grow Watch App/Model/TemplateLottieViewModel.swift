@@ -1,15 +1,8 @@
-//
-//  LottieViewModel.swift
-//  Grow Watch App
-//
-//  Created by Rangga Yudhistira Brata on 26/04/24.
-//
-
 import SwiftUI
 import UIKit
 import SDWebImageLottieCoder
 
-class LottieViewModel: ObservableObject {
+class TemplateLottieViewModel: ObservableObject {
     @Published private(set) var image: UIImage = UIImage(named: "defaultIcon")!
     
     // MARK: - Animation
@@ -18,8 +11,7 @@ class LottieViewModel: ObservableObject {
     private var animationTimer: Timer?
     private var currentFrame: UInt = 0
     private var playing: Bool = false
-    var speed: Double = 1.0
-    var lastFrame: UInt?
+    private var speed: Double = 1.0
     
     /// Loads animation data
     /// - Parameter url: url of animation JSON
@@ -66,12 +58,12 @@ class LottieViewModel: ObservableObject {
     
     /// Replace current frame with next one
     private func nextFrame() {
-//        guard let coder = coder else { return }
+        guard let coder = coder else { return }
 
         currentFrame += 1
         // make sure that current frame is within frame count
         // if reaches the end, we set it back to 0 so it loops
-        if currentFrame == lastFrame {
+        if currentFrame >= coder.animatedImageFrameCount {
             currentFrame = 0
         }
         
